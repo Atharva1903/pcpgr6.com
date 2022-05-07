@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> menu bar</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript">
+		function togglemenu(){
+			document.getElementById('sidebar').classList.toggle('active');
+			document.getElementById('content').classList.toggle('active');
+		}
+	</script>
+</head>
+<body>
+<div class="banner">
+                <div class="navbar">
+                    <img src="logo.png" class="logo">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        
+                        <li><a href="about.html">About Us</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+	<div id="sidebar" onclick="togglemenu()">
+		<div class="toggle-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div >
+		<label class="menu"><p style="font-size:25px"><u style="text-decoration-color:#FC6A03"><b>MENU</b></u></p></label>
+		</div>
+			<ul>
+				<li><a href="NC.html">Networking Cables</a></li>
+				<li><a href="IO.html">Input and Output Cables</a></li>
+				<li><a href="IOP.html">Input and Output Ports</a></li>
+				<li><a href="Modem.html">Modem</a></li>
+				<li><a href="NIC.html">Network Interface Cards</a></li>
+			</ul>
+		
+	</div>
+		<div id ="content">
+			<br>
+			<br>
+			<br>
+			<br>
+			<h1>Web Page Design & Computer Peripherals</h1><br><br>
+			<hr color="#FC6A03"><br><br><br><br><br><br><br><br><br><br>
+			<p><h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">DEVELOP A WEBSITE TO GIVE INFORMATION OF DIFFERENT TYPES OF I/O CABLES,I/O PORTS,MODEM,NETWORK 
+				INTERFACE CARD. MAKE WEBSITE ATTRAVCTIVE USING DIFFERENT TAGS ?<h1></p>
+		</div>
+		
+		
+		
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> menu bar</title>
+<link rel="stylesheet" type="text/css" href="contact.css">
+	<script type="text/javascript">
+		function togglemenu(){
+			document.getElementById('sidebar').classList.toggle('active');
+			document.getElementById('content').classList.toggle('active');
+		}
+	</script>
+</head>
+<body bgcolor="white">
+<div class="banner">
+                <div class="navbar">
+                    <img src="logo.png" class="logo">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        
+                        <li><a href="about.html">About Us</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+	<div id="sidebar" onclick="togglemenu()">
+		<div class="toggle-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div >
+		<label class="menu"><p style="font-size:25px"><u style="text-decoration-color:#FC6A03"><b>MENU</b></u></p></label>
+		</div>
+			<ul>
+				<li><a href="NC.html">Networking Cables</a></li>
+				<li><a href="IO.html">Input and Output Cables</a></li>
+				<li><a href="IOP.html">Input and Output Ports</a></li>
+				<li><a href="Modem.html">Modem</a></li>
+				<li><a href="NIC.html">Network Interface Cards</a></li>
+			</ul>
+		
+	</div>
+	<header class="major" id="contact">
+
+		</header>
+		<div class="container">
+		<form onsubmit="sendEmail(); reset(); return false;">
+		<h3>CONTACT FORM</h3>
+		<input type="text" id="name" placeholder="Your Name" required>
+		<input type="email" id="email" placeholder="Email Id" required>
+		<input type="text" id="phone" placeholder="Phone No" required>
+		<textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+		<button type="submit">Send</button>
+		</form>
+		</div>
+		<!--javascript enabled to receive data on email-->
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script>
+		function sendEmail(){
+		Email.send({
+		Host : "smtp.gmail.com",
+		Username : "errorbynight.chiragf@gmail.com",
+  Password : "auybnsfyramynyim",
+  To : 'errorbynight.chiragf@gmail.com',
+		From : document.getElementById("email").value,
+		Subject : "New Contact Form Enquiery",
+		Body : "Name: " + document.getElementById("name").value
+		+ "<br> Email: " + document.getElementById("email").value
+		+ "<br> Phone no: " + document.getElementById("phone").value
+		+ "<br> Message: " + document.getElementById("message").value
+		}).then(
+		message => alert("Message Sent Successfully")
+		);
+		}
+		</script>
+</body>
+</html>
