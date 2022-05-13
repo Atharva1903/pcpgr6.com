@@ -43,34 +43,16 @@
 
 		</header>
 		<div class="container">
-		<form onsubmit="sendEmail(); reset(); return false;">
-		<h3>CONTACT FORM</h3>
-		<input type="text" id="name" placeholder="Your Name" required>
-		<input type="email" id="email" placeholder="Email Id" required>
-		<input type="text" id="phone" placeholder="Phone No" required>
-		<textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-		<button type="submit">Send</button>
-		</form>
+			<form action="https://formsubmit.co/k.atharva1903@gmail.com" method="POST"><!--onsubmit="sendEmail(); reset(); return false;"-->
+				<h3>GET IN TOUCH</h3>
+				<input type="name" name="name"  id="name" placeholder="Your Name" required>
+				<input type="email"  name="email"  id="email" placeholder="Email Id" required>
+				<input type="text" name="text"   id="phone" placeholder="Phone No" required>
+				<textarea id="message" name="message"   rows="4" placeholder="How can we help you?"></textarea>
+				<button type="submit">Send</button>
+			</form>
+			
 		</div>
-		<!--javascript enabled to receive data on email-->
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
-		<script>
-		function sendEmail(){
-		Email.send({
-		Host : "smtp.gmail.com",
-		Username : "errorbynight.chiragf@gmail.com",
-  Password : "auybnsfyramynyim",
-  To : 'errorbynight.chiragf@gmail.com',
-		From : document.getElementById("email").value,
-		Subject : "New Contact Form Enquiery",
-		Body : "Name: " + document.getElementById("name").value
-		+ "<br> Email: " + document.getElementById("email").value
-		+ "<br> Phone no: " + document.getElementById("phone").value
-		+ "<br> Message: " + document.getElementById("message").value
-		}).then(
-		message => alert("Message Sent Successfully")
-		);
-		}
-		</script>
+		
 </body>
 </html>
